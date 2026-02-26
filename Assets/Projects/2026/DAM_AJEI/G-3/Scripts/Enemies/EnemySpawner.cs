@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,11 +11,17 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
         public ObjPool pool;
         [Range(0, 100)] public int probability;
     }
-    public class TargetPoolController : MonoBehaviour
+    public class EnemySpawner : MonoBehaviour
     {
+        [Header("Spawn")]
+        [SerializeField] private float distance;
+        [SerializeField] private float spawn_cooldown = 5f;
+        [Header("Pools")]
         [SerializeField] private List<Target_Pool_Type> pool_list = new List<Target_Pool_Type>();
 
         private int max_percent = 0;
+
+        private bool cooldown_finish = true;
         void Start()
         {
             foreach(Target_Pool_Type pool_type in pool_list)
@@ -26,7 +33,21 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
         // Update is called once per frame
         void Update()
         {
+            if (cooldown_finish)
+            {
+                StartCoroutine(Corutine_SpawnEnemy(spawn_cooldown));
+            }
+        }
+        public void SpawnEnemy()
+        {
+            float rand_x = UnityEngine.Random.Range(-1f, 1f);
+            float rand_z = UnityEngine.Random.Range(-1f, 1f);
 
+            Vector3 rand_dir = new Vector3(rand_x, 0, rand_z).normalized;
+
+            Vector3 rand_pos = GameController.Instance.t_player.position + rand_dir * distance;
+
+            ActivateEnemy(rand_pos);
         }
         public void ActivateEnemy(Vector3 pos)
         {
@@ -45,6 +66,14 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
 
             GameObject target = pool_to_use.GetObj();
             target.transform.position = pos;
+        }
+
+        IEnumerator Corutine_SpawnEnemy(float cooldown)
+        {
+            cooldown_finish = false;
+            yield return new WaitForSeconds(cooldown);
+            SpawnEnemy();
+            cooldown_finish = true;
         }
     }
 }

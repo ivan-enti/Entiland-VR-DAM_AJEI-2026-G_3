@@ -4,16 +4,11 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
 {
     public class Target_Enemy : Target
     {
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
+        [SerializeField] private float speed = 1.0f;
+        private void Update()
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            transform.LookAt(GameController.Instance.t_player.position);
+            transform.position += transform.forward * speed * Time.deltaTime;
         }
         public override void ReciveDamage(float damage)
         {
