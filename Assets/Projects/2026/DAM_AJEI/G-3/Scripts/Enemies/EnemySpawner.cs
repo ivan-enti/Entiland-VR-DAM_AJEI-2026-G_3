@@ -80,5 +80,10 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
             SpawnEnemy();
             cooldown_finish = true;
         }
+
+        public void EnemyEliminated()
+        {
+            current_enemies--;
+        }
     }
 }
