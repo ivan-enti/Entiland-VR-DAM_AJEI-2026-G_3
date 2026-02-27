@@ -6,15 +6,13 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
     {
         [SerializeField] protected float health = 5f;
 
-        private EnemySpawner spawner = null;
         public abstract void ReciveDamage(float damage);
 
         public virtual void Die()
         {
-            if(spawner != null) { spawner.EnemyEliminated(); }
+            GameController.Instance.EnemyEliminated();
             gameObject.SetActive(false);
         }
 
-        public void SetSpawner(EnemySpawner set_spawner) { spawner = set_spawner; }
     }
 }
