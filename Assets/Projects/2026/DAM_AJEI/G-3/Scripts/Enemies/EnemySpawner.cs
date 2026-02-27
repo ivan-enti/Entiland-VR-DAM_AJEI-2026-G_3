@@ -36,7 +36,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
         // Update is called once per frame
         void Update()
         {
-            if (cooldown_finish && current_enemies < max_enemies)
+            if (cooldown_finish && current_enemies <= max_enemies)
             {
                 StartCoroutine(Corutine_SpawnEnemy(spawn_cooldown));
             }
