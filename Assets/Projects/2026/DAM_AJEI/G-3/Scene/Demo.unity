@@ -186,8 +186,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.20444712, y: 0.22100852, z: 0.38077396}
-  m_Center: {x: 0.18974736, y: 0.06258059, z: 0.00091653835}
+  m_Size: {x: 0.292831, y: 0.3253914, z: 0.5468012}
+  m_Center: {x: 0.23393953, y: 0.045642268, z: -0.013470973}
 --- !u!114 &359302186 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1575735658702523898, guid: f13bbbc9578242a44953eec81cfb27d4, type: 3}
@@ -652,7 +652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t_player: {fileID: 1725796535}
-  spawner: {fileID: 0}
+  spawner: {fileID: 1064451650}
 --- !u!1 &615036572
 GameObject:
   m_ObjectHideFlags: 0
@@ -16016,7 +16016,7 @@ Transform:
   m_GameObject: {fileID: 1064451648}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
