@@ -49,6 +49,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
             Vector3 rand_dir = new Vector3(rand_x, 0, rand_z).normalized;
 
             Vector3 rand_pos = GameController.Instance.t_player.position + rand_dir * distance;
+            rand_pos.y = transform.position.y;
 
             ActivateEnemy(rand_pos);
         }

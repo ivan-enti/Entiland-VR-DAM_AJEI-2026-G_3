@@ -52,7 +52,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
         }
         public override void Die()
         {
-
+            base.Die();
         }
     }
 }
