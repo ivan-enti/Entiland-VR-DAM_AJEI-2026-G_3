@@ -15831,6 +15831,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7668830300715375533, guid: f13bbbc9578242a44953eec81cfb27d4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1725796536}
+    - targetCorrespondingSourceObject: {fileID: 7668830300715375533, guid: f13bbbc9578242a44953eec81cfb27d4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1725796537}
   m_SourcePrefab: {fileID: 100100000, guid: f13bbbc9578242a44953eec81cfb27d4, type: 3}
 --- !u!4 &1049661771 stripped
 Transform:
@@ -16126,6 +16129,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9413d460e98076241a1f46c91201217d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1206355859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1206355860}
+  m_Layer: 0
+  m_Name: Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1206355860
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206355859}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.04, y: 0.59, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1693637101}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1317293966
 GameObject:
   m_ObjectHideFlags: 0
@@ -16281,6 +16315,7 @@ Transform:
   - {fileID: 586306539}
   - {fileID: 7671037750797595960}
   - {fileID: 814339899}
+  - {fileID: 1206355860}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1725796535 stripped
@@ -16301,6 +16336,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+--- !u!114 &1725796537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616825762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 276f5b9d628e04e4289f1760fbc5ed82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killCount: 0
+  spawnPoint: {fileID: 1206355860}
+  weapons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1786245514
 GameObject:
   m_ObjectHideFlags: 0
@@ -16398,6 +16452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2097769182}
   - component: {fileID: 2097769181}
+  - component: {fileID: 2097769183}
   m_Layer: 0
   m_Name: Sun
   m_TagString: Untagged
@@ -16485,6 +16540,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 122.968, y: -224.2, z: -133.837}
+--- !u!114 &2097769183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097769180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1422630755462859885
 GameObject:
   m_ObjectHideFlags: 0
