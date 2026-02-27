@@ -1,10 +1,13 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Collider))]
-public abstract class Weapon : MonoBehaviour
+namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
 {
-    [SerializeField] protected string enemy_tag = "Enemy";
-    [SerializeField] protected float damage;
-    [SerializeField] protected float attack_rate;
-    
+    [RequireComponent(typeof(Collider))]
+    public abstract class Weapon : MonoBehaviour
+    {
+        [SerializeField] protected string enemy_tag = "Enemy";
+        [SerializeField] protected float damage;
+        [SerializeField] protected float attack_rate;
+
+    }
 }

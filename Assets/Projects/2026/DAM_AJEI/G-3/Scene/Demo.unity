@@ -167,6 +167,8 @@ MonoBehaviour:
   enemy_tag: Enemy
   damage: 3
   attack_rate: 2
+  rb: {fileID: 3391128053949095470}
+  min_velocity: 1
 --- !u!65 &251321789
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16000,6 +16002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1064451649}
   - component: {fileID: 1064451650}
+  - component: {fileID: 1064451651}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -16041,6 +16044,27 @@ MonoBehaviour:
   pool_list:
   - pool: {fileID: 615036574}
     probability: 75
+--- !u!135 &1064451651
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064451648}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 20
+  m_Center: {x: 0, y: -1, z: 0}
 --- !u!114 &1157621155
 MonoBehaviour:
   m_ObjectHideFlags: 0

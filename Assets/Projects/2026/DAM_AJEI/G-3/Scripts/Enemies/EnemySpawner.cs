@@ -11,6 +11,8 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
         public TargetPool pool;
         [Range(0, 100)] public int probability;
     }
+
+    [RequireComponent(typeof(Collider))]
     public class EnemySpawner : MonoBehaviour
     {
         [Header("Spawn")]
@@ -25,12 +27,15 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
         private bool cooldown_finish = true;
 
         private int current_enemies = 0;
+
+        private Collider col;
         void Start()
         {
             foreach(Target_Pool_Type pool_type in pool_list)
             {
                 max_percent += pool_type.probability;
             }
+            col = GetComponent<Collider>();
         }
 
         // Update is called once per frame
@@ -43,17 +48,25 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
         }
         public void SpawnEnemy()
         {
-            float rand_x = UnityEngine.Random.Range(-1f, 1f);
-            float rand_z = UnityEngine.Random.Range(-1f, 1f);
+            GameObject target = ActivateEnemy();
 
-            Vector3 rand_dir = new Vector3(rand_x, 0, rand_z).normalized;
+            Vector3 rand_pos = Vector3.zero;
+            while (rand_pos == Vector3.zero)
+            {
+                rand_pos = col.ClosestPoint(GetRandomPos());
+                Vector3 p_pos = GameController.Instance.t_player.position;
+                if (Vector3.Distance(p_pos, rand_pos) < distance)
+                {
+                    rand_pos = Vector3.zero;
+                }
+            }
 
-            Vector3 rand_pos = GameController.Instance.t_player.position + rand_dir * distance;
-            rand_pos.y = transform.position.y;
+            target.transform.position = rand_pos;
+            current_enemies++;
 
-            ActivateEnemy(rand_pos);
+
         }
-        public void ActivateEnemy(Vector3 pos)
+        public GameObject ActivateEnemy()
         {
             int random_percent = UnityEngine.Random.Range(0, max_percent);
 
@@ -68,10 +81,19 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
                 }
             }
 
-            GameObject target = pool_to_use.GetObj();
-            target.transform.position = pos;
+            return pool_to_use.GetObj();
+        }
+        public Vector3 GetRandomPos()
+        {
+            float rand_x = UnityEngine.Random.Range(-1f, 1f);
+            float rand_z = UnityEngine.Random.Range(-1f, 1f);
 
-            current_enemies++;
+            Vector3 rand_dir = new Vector3(rand_x, 0, rand_z).normalized;
+
+            Vector3 rand_pos = GameController.Instance.t_player.position + rand_dir * distance;
+            rand_pos.y = transform.position.y;
+
+            return rand_pos;
         }
 
         IEnumerator Corutine_SpawnEnemy(float cooldown)
