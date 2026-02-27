@@ -6,7 +6,6 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
     {
         public static GameController Instance { get; private set; }
         public Transform t_player;
-
         void Awake()
         {
             if (Instance != null && Instance != this)
