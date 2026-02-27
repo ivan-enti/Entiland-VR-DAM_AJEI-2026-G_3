@@ -32,7 +32,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
                 Attack();
             }
         }
-        public override void ReciveDamage(float damage)
+        public override void TakeDamage(float damage)
         {
             health -= damage;
             if(health <= 0)

@@ -1,15 +1,18 @@
 using EntilandVR.DosCinco.DAM_AJEI.G_Tres;
 using UnityEngine;
 
-public class Basic_axe : Weapon
+namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
 {
-    private void OnTriggerEnter(Collider other)
+    public class Basic_axe : Weapon
     {
-        if(other.tag != enemy_tag) { return; }
-
-        if(other.TryGetComponent<Target>(out Target target))
+        private void OnTriggerEnter(Collider other)
         {
+            if (other.tag != enemy_tag) { return; }
 
+            if (other.TryGetComponent<Target>(out Target target))
+            {
+                target.TakeDamage(damage);
+            }
         }
     }
 }

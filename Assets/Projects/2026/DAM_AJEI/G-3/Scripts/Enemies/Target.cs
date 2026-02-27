@@ -6,7 +6,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
     {
         [SerializeField] protected float health = 5f;
 
-        public abstract void ReciveDamage(float damage);
+        public abstract void TakeDamage(float damage);
 
         public virtual void Die()
         {
