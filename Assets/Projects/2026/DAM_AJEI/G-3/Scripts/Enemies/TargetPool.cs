@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
 {
-    public class ObjPool : MonoBehaviour
+    public class TargetPool : MonoBehaviour
     {
         [SerializeField] private GameObject obj_to_pool;
         [SerializeField] private int pool_num;
 
-        private List<GameObject> pool = new List<GameObject>();
+        private List<Target> pool = new List<Target>();
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Awake()
         {
@@ -16,26 +16,27 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
             {
                 GameObject obj = Instantiate(obj_to_pool);
                 obj.SetActive(false);
-                pool.Add(obj);
+                pool.Add(obj.GetComponent<Target>());
             }
         }
 
-        public GameObject GetObj()
+        public GameObject GetObj(EnemySpawner spawner = null)
         {
             GameObject get_obj = null;
 
-            foreach (GameObject obj in pool)
+            foreach (Target target in pool)
             {
-                if (!obj.activeSelf)
+                if (!target.gameObject.activeSelf)
                 {
-                    get_obj = obj;
+                    get_obj = target.gameObject;
                     break;
                 }
             }
 
             if(get_obj == null)
             {
-                get_obj = Instantiate(pool[0], pool[0].transform);
+                get_obj = Instantiate(obj_to_pool);
+                pool.Add(get_obj.GetComponent<Target>());
             }
 
             get_obj.SetActive(true);
