@@ -8,7 +8,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
     [Serializable]
     public struct Target_Pool_Type
     {
-        public ObjPool pool;
+        public TargetPool pool;
         [Range(0, 100)] public int probability;
     }
     public class EnemySpawner : MonoBehaviour
@@ -16,12 +16,15 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
         [Header("Spawn")]
         [SerializeField] private float distance;
         [SerializeField] private float spawn_cooldown = 5f;
+        [SerializeField] private int max_enemies = 5;
         [Header("Pools")]
         [SerializeField] private List<Target_Pool_Type> pool_list = new List<Target_Pool_Type>();
 
         private int max_percent = 0;
 
         private bool cooldown_finish = true;
+
+        private int current_enemies = 0;
         void Start()
         {
             foreach(Target_Pool_Type pool_type in pool_list)
@@ -33,7 +36,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
         // Update is called once per frame
         void Update()
         {
-            if (cooldown_finish)
+            if (cooldown_finish && current_enemies < max_enemies)
             {
                 StartCoroutine(Corutine_SpawnEnemy(spawn_cooldown));
             }
@@ -53,7 +56,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
         {
             int random_percent = UnityEngine.Random.Range(0, max_percent);
 
-            ObjPool pool_to_use = null;
+            TargetPool pool_to_use = null;
             int temp = 0;
             foreach (Target_Pool_Type pool_type in pool_list)
             {
@@ -66,6 +69,8 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
 
             GameObject target = pool_to_use.GetObj();
             target.transform.position = pos;
+
+            current_enemies++;
         }
 
         IEnumerator Corutine_SpawnEnemy(float cooldown)

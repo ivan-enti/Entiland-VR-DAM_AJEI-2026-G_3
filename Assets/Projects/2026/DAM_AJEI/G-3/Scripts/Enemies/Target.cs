@@ -8,5 +8,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
         public abstract void ReciveDamage(float damage);
 
         public abstract void Die();
+
+
     }
 }
