@@ -119,6 +119,266 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &84288828 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 719123726935772631, guid: 79830263e6e3b5140bee6fea8fab6b83, type: 3}
+  m_PrefabInstance: {fileID: 5225642374495025627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &84288830
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84288828}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.031420708, y: 0.35310015, z: 0.31069693}
+  m_Center: {x: -0.021688938, y: 0.2197675, z: 0.0084063215}
+--- !u!114 &84288832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84288828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822bc9090447b9c40833509c4a32e597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreMe: 0
+  body: {fileID: 0}
+  hightlightMaterial: {fileID: 0}
+  isGrabbable: 1
+  CopySettings: {fileID: 0}
+  grabType: 0
+  grabPoseType: 0
+  handType: 0
+  singleHandOnly: 1
+  instantGrab: 0
+  useGentleGrab: 1
+  maintainGrabOffset: 0
+  parentOnGrab: 1
+  heldNoFriction: 1
+  ignoreWeight: 0
+  allowHeldSwapping: 1
+  throwPower: 1
+  jointBreakForce: 2500
+  showAdvancedSettings: 1
+  makeChildrenGrabbable: 1
+  grabPriorityWeight: 1
+  ignoreReleaseTime: 0.25
+  minHeldDrag: 1.5
+  minHeldAngleDrag: 3
+  minHeldMass: 0.1
+  maxHeldVelocity: 10
+  heldPositionOffset: {x: 0, y: 0, z: 0}
+  heldRotationOffset: {x: 0, y: 0, z: 0}
+  customGrabJoint: {fileID: 0}
+  jointedBodies: []
+  heldIgnoreColliders: []
+  pullApartBreakOnly: 1
+  showEvents: 1
+  onGrab:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Autohand.Demo.TextChanger, Assembly-CSharp
+        m_MethodName: UpdateText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: This Mallet uses a "Grab Lock" Component and can be released
+            with squeeze
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3391128053949095470}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
+        m_MethodName: set_isKinematic
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onRelease:
+    m_PersistentCalls:
+      m_Calls: []
+  onSqueeze:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 84288832}
+        m_TargetAssemblyTypeName: Autohand.Grabbable, Assembly-CSharp
+        m_MethodName: ForceHandsRelease
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onUnsqueeze:
+    m_PersistentCalls:
+      m_Calls: []
+  onHighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  onUnhighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  OnJointBreak:
+    m_PersistentCalls:
+      m_Calls: []
+  lockHandOnGrab: 0
+--- !u!1 &147753775 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8815020039506035152, guid: 8f25afa6ef8ca054ebea1137006bcc3c, type: 3}
+  m_PrefabInstance: {fileID: 7671702934613493116}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &147753778
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147753775}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.061768226, y: 0.37942922, z: 0.05385081}
+  m_Center: {x: -0.014265384, y: 0.19998437, z: -0.015895844}
+--- !u!114 &147753779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147753775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822bc9090447b9c40833509c4a32e597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreMe: 0
+  body: {fileID: 0}
+  hightlightMaterial: {fileID: 0}
+  isGrabbable: 1
+  CopySettings: {fileID: 0}
+  grabType: 0
+  grabPoseType: 0
+  handType: 0
+  singleHandOnly: 1
+  instantGrab: 0
+  useGentleGrab: 1
+  maintainGrabOffset: 0
+  parentOnGrab: 1
+  heldNoFriction: 1
+  ignoreWeight: 0
+  allowHeldSwapping: 1
+  throwPower: 1
+  jointBreakForce: 2500
+  showAdvancedSettings: 1
+  makeChildrenGrabbable: 1
+  grabPriorityWeight: 1
+  ignoreReleaseTime: 0.25
+  minHeldDrag: 1.5
+  minHeldAngleDrag: 3
+  minHeldMass: 0.1
+  maxHeldVelocity: 10
+  heldPositionOffset: {x: 0, y: 0, z: 0}
+  heldRotationOffset: {x: 0, y: 0, z: 0}
+  customGrabJoint: {fileID: 0}
+  jointedBodies: []
+  heldIgnoreColliders: []
+  pullApartBreakOnly: 1
+  showEvents: 1
+  onGrab:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Autohand.Demo.TextChanger, Assembly-CSharp
+        m_MethodName: UpdateText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: This Mallet uses a "Grab Lock" Component and can be released
+            with squeeze
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3391128053949095470}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
+        m_MethodName: set_isKinematic
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onRelease:
+    m_PersistentCalls:
+      m_Calls: []
+  onSqueeze:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 147753779}
+        m_TargetAssemblyTypeName: Autohand.Grabbable, Assembly-CSharp
+        m_MethodName: ForceHandsRelease
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onUnsqueeze:
+    m_PersistentCalls:
+      m_Calls: []
+  onHighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  onUnhighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  OnJointBreak:
+    m_PersistentCalls:
+      m_Calls: []
+  lockHandOnGrab: 0
 --- !u!1 &251321786
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,6 +461,115 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9413d460e98076241a1f46c91201217d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &422320662 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2152076027823722423, guid: 0f1838a2317558641bcf5371661ea4db, type: 3}
+  m_PrefabInstance: {fileID: 7975000767473375428}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &422320664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422320662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822bc9090447b9c40833509c4a32e597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreMe: 0
+  body: {fileID: 0}
+  hightlightMaterial: {fileID: 0}
+  isGrabbable: 1
+  CopySettings: {fileID: 0}
+  grabType: 0
+  grabPoseType: 0
+  handType: 0
+  singleHandOnly: 1
+  instantGrab: 0
+  useGentleGrab: 1
+  maintainGrabOffset: 0
+  parentOnGrab: 1
+  heldNoFriction: 1
+  ignoreWeight: 0
+  allowHeldSwapping: 1
+  throwPower: 1
+  jointBreakForce: 2500
+  showAdvancedSettings: 1
+  makeChildrenGrabbable: 1
+  grabPriorityWeight: 1
+  ignoreReleaseTime: 0.25
+  minHeldDrag: 1.5
+  minHeldAngleDrag: 3
+  minHeldMass: 0.1
+  maxHeldVelocity: 10
+  heldPositionOffset: {x: 0, y: 0, z: 0}
+  heldRotationOffset: {x: 0, y: 0, z: 0}
+  customGrabJoint: {fileID: 0}
+  jointedBodies: []
+  heldIgnoreColliders: []
+  pullApartBreakOnly: 1
+  showEvents: 1
+  onGrab:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Autohand.Demo.TextChanger, Assembly-CSharp
+        m_MethodName: UpdateText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: This Mallet uses a "Grab Lock" Component and can be released
+            with squeeze
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3391128053949095470}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
+        m_MethodName: set_isKinematic
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onRelease:
+    m_PersistentCalls:
+      m_Calls: []
+  onSqueeze:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 422320664}
+        m_TargetAssemblyTypeName: Autohand.Grabbable, Assembly-CSharp
+        m_MethodName: ForceHandsRelease
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onUnsqueeze:
+    m_PersistentCalls:
+      m_Calls: []
+  onHighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  onUnhighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  OnJointBreak:
+    m_PersistentCalls:
+      m_Calls: []
+  lockHandOnGrab: 0
 --- !u!1001 &457848541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16042,7 +16411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 15
-  spawn_cooldown: 5
+  spawn_cooldown: 20
   max_enemies: 5
   pool_list:
   - pool: {fileID: 615036574}
@@ -16231,16 +16600,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3664734347763612691, guid: 3be60d0d9ceb5be4b83db0bd6b430cc9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.7151246
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664734347763612691, guid: 3be60d0d9ceb5be4b83db0bd6b430cc9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.7151246
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664734347763612691, guid: 3be60d0d9ceb5be4b83db0bd6b430cc9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.7151246
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664734347763612691, guid: 3be60d0d9ceb5be4b83db0bd6b430cc9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.446
+      value: 8.4582
       objectReference: {fileID: 0}
     - target: {fileID: 3664734347763612691, guid: 3be60d0d9ceb5be4b83db0bd6b430cc9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8091536
+      value: -1.5149
       objectReference: {fileID: 0}
     - target: {fileID: 3664734347763612691, guid: 3be60d0d9ceb5be4b83db0bd6b430cc9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 93.676
+      value: 93.677
       objectReference: {fileID: 0}
     - target: {fileID: 3664734347763612691, guid: 3be60d0d9ceb5be4b83db0bd6b430cc9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16633,16 +17014,28 @@ PrefabInstance:
       value: Prefab Vikingo_03
       objectReference: {fileID: 0}
     - target: {fileID: 2056895173740337485, guid: d5acae10538d61e4fac0270f376feb0f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 92.40624
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056895173740337485, guid: d5acae10538d61e4fac0270f376feb0f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 92.40624
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056895173740337485, guid: d5acae10538d61e4fac0270f376feb0f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 92.40624
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056895173740337485, guid: d5acae10538d61e4fac0270f376feb0f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.634
+      value: 9.2934
       objectReference: {fileID: 0}
     - target: {fileID: 2056895173740337485, guid: d5acae10538d61e4fac0270f376feb0f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.436
+      value: -0.49777
       objectReference: {fileID: 0}
     - target: {fileID: 2056895173740337485, guid: d5acae10538d61e4fac0270f376feb0f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 94.793
+      value: 96.222
       objectReference: {fileID: 0}
     - target: {fileID: 2056895173740337485, guid: d5acae10538d61e4fac0270f376feb0f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16932,12 +17325,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 193944594130376557, guid: 79830263e6e3b5140bee6fea8fab6b83, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 193944594130376557, guid: 79830263e6e3b5140bee6fea8fab6b83, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 193944594130376557, guid: 79830263e6e3b5140bee6fea8fab6b83, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 193944594130376557, guid: 79830263e6e3b5140bee6fea8fab6b83, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.258048
+      value: 13.86
       objectReference: {fileID: 0}
     - target: {fileID: 193944594130376557, guid: 79830263e6e3b5140bee6fea8fab6b83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.783
+      value: -1.665
       objectReference: {fileID: 0}
     - target: {fileID: 193944594130376557, guid: 79830263e6e3b5140bee6fea8fab6b83, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16994,7 +17399,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 719123726935772631, guid: 79830263e6e3b5140bee6fea8fab6b83, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 84288832}
+    - targetCorrespondingSourceObject: {fileID: 719123726935772631, guid: 79830263e6e3b5140bee6fea8fab6b83, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 84288830}
   m_SourcePrefab: {fileID: 100100000, guid: 79830263e6e3b5140bee6fea8fab6b83, type: 3}
 --- !u!1001 &5296520747558640417
 PrefabInstance:
@@ -17009,16 +17420,28 @@ PrefabInstance:
       value: Prefab_Vikingo2
       objectReference: {fileID: 0}
     - target: {fileID: 5659430793171971505, guid: 145bb5059f01087438563ec2aa19d5f1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 14.736623
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659430793171971505, guid: 145bb5059f01087438563ec2aa19d5f1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 14.736623
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659430793171971505, guid: 145bb5059f01087438563ec2aa19d5f1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 14.736623
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659430793171971505, guid: 145bb5059f01087438563ec2aa19d5f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.972
+      value: 10.414
       objectReference: {fileID: 0}
     - target: {fileID: 5659430793171971505, guid: 145bb5059f01087438563ec2aa19d5f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.723
+      value: -0.93781
       objectReference: {fileID: 0}
     - target: {fileID: 5659430793171971505, guid: 145bb5059f01087438563ec2aa19d5f1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 95.712
+      value: 98.462
       objectReference: {fileID: 0}
     - target: {fileID: 5659430793171971505, guid: 145bb5059f01087438563ec2aa19d5f1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17994,12 +18417,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: c3dffa2aabafc5148a78a3e748711e4e, type: 2}
     - target: {fileID: 8151214785271520106, guid: 8f25afa6ef8ca054ebea1137006bcc3c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151214785271520106, guid: 8f25afa6ef8ca054ebea1137006bcc3c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151214785271520106, guid: 8f25afa6ef8ca054ebea1137006bcc3c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151214785271520106, guid: 8f25afa6ef8ca054ebea1137006bcc3c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.213536
+      value: 12.732
       objectReference: {fileID: 0}
     - target: {fileID: 8151214785271520106, guid: 8f25afa6ef8ca054ebea1137006bcc3c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.772
+      value: -1.714
       objectReference: {fileID: 0}
     - target: {fileID: 8151214785271520106, guid: 8f25afa6ef8ca054ebea1137006bcc3c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18040,7 +18475,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8815020039506035152, guid: 8f25afa6ef8ca054ebea1137006bcc3c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 147753779}
+    - targetCorrespondingSourceObject: {fileID: 8815020039506035152, guid: 8f25afa6ef8ca054ebea1137006bcc3c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 147753778}
   m_SourcePrefab: {fileID: 100100000, guid: 8f25afa6ef8ca054ebea1137006bcc3c, type: 3}
 --- !u!1001 &7975000767473375428
 PrefabInstance:
@@ -18052,27 +18493,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1627599444845352205, guid: 0f1838a2317558641bcf5371661ea4db, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1627599444845352205, guid: 0f1838a2317558641bcf5371661ea4db, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1627599444845352205, guid: 0f1838a2317558641bcf5371661ea4db, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1627599444845352205, guid: 0f1838a2317558641bcf5371661ea4db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.57
+      value: 13.909
       objectReference: {fileID: 0}
     - target: {fileID: 1627599444845352205, guid: 0f1838a2317558641bcf5371661ea4db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.0132
+      value: -1.4411
       objectReference: {fileID: 0}
     - target: {fileID: 1627599444845352205, guid: 0f1838a2317558641bcf5371661ea4db, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 94.177
+      value: 92.556
       objectReference: {fileID: 0}
     - target: {fileID: 1627599444845352205, guid: 0f1838a2317558641bcf5371661ea4db, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18121,7 +18562,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2152076027823722423, guid: 0f1838a2317558641bcf5371661ea4db, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 422320664}
   m_SourcePrefab: {fileID: 100100000, guid: 0f1838a2317558641bcf5371661ea4db, type: 3}
 --- !u!114 &8798839958778141491
 MonoBehaviour:
