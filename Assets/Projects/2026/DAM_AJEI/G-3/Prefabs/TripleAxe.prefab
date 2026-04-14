@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy_tag: Enemy
-  damage: 3
+  damage: 9
   attack_rate: 2
   rb: {fileID: 2963788132268429814}
   min_velocity: 1
