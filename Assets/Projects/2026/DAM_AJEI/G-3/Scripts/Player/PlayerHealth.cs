@@ -1,23 +1,37 @@
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
 {
-    [SerializeField] private float health = 100f;
-
-    public void TakeDamage(float damage)
+    public class PlayerHealth : MonoBehaviour
     {
-        health -= damage;
+        [SerializeField] private float max_health = 100f;
+        [SerializeField] private float regen_per_second = 0.01f;
+        [SerializeField] private UIHealth UIHealth;
 
-        Debug.Log("Player health: " + health);
-
-        if (health <= 0)
+        private float current_health = 0;
+        private void Start()
         {
-            Die();
+            current_health = max_health;
         }
-    }
+        void Update ()
+        {
+            UIHealth.UpdateHealthPanel(max_health, current_health);
+        }
+        public void TakeDamage(float damage)
+        {
+            current_health -= damage;
 
-    private void Die()
-    {
-        Debug.Log("Player died");
+            Debug.Log("Player health: " + current_health);
+
+            if (current_health <= 0)
+            {
+                Die();
+            }
+        }
+
+        private void Die()
+        {
+            Debug.Log("Player died");
+        }
     }
 }
