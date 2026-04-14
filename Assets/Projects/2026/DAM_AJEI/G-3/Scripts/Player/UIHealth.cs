@@ -12,7 +12,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
         {
             float health_percent = current_health / max_health;
 
-            float current_alpha = max_alpha * health_percent;
+            float current_alpha = max_alpha * (1f - health_percent);
             panel.alpha = current_alpha;
         }
     }
