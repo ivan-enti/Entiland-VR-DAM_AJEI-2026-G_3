@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
@@ -12,12 +11,10 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
 
         private float attackTimer;
         private PlayerHealth playerHealth;
-        private float current_speed = 1.0f;
 
         private void Start()
         {
             playerHealth = GameController.Instance.t_player.GetComponent<PlayerHealth>();
-            current_speed = speed;
         }
         private void Update()
         {
@@ -28,7 +25,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
 
             if (distance > attackDistance)
             {
-                transform.position += transform.forward * current_speed * Time.deltaTime;
+                transform.position += transform.forward * speed * Time.deltaTime;
             }
             else
             {
@@ -42,21 +39,6 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
             {
                 Die();
             }
-        }
-        public override void FrezeEffect(float time)
-        {
-            if (!frost)
-            {
-                StartCoroutine(Corutine_Freze(time));
-            }
-        }
-        private IEnumerator Corutine_Freze(float time)
-        {
-            current_speed = speed / 2;
-            frost = true;
-            yield return new WaitForSeconds(time);
-            current_speed = speed;
-            frost = false;
         }
         private void Attack()
         {
