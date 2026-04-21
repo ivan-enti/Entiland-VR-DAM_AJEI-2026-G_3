@@ -21634,7 +21634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max_health: 100
-  regen_per_second: 0.01
+  regen_per_second: 0.25
   UIHealth: {fileID: 11338890}
 --- !u!114 &1725796537
 MonoBehaviour:
