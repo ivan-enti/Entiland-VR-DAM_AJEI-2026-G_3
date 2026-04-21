@@ -20175,6 +20175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hacha maul (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3803346317927843118, guid: 14242afb884e7b64aae6278f39f8a5a2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4576752333501849492, guid: 14242afb884e7b64aae6278f39f8a5a2, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.5
@@ -20239,6 +20243,11 @@ PrefabInstance:
 --- !u!4 &1097575447 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4576752333501849492, guid: 14242afb884e7b64aae6278f39f8a5a2, type: 3}
+  m_PrefabInstance: {fileID: 1097575446}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1097575448 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3803346317927843118, guid: 14242afb884e7b64aae6278f39f8a5a2, type: 3}
   m_PrefabInstance: {fileID: 1097575446}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1122907626
@@ -21656,6 +21665,7 @@ MonoBehaviour:
   - {fileID: 5974156276185869031, guid: 84ec61719be03224faa4f9d9a7df3aba, type: 3}
   - {fileID: 4900450726843061442, guid: 886704e6f207e0540af3f456930d5471, type: 3}
   - {fileID: 5250127600092056676, guid: 10f21822e3fd05543bb447c5b8ec016c, type: 3}
+  - {fileID: 1097575448}
 --- !u!1 &1756940120
 GameObject:
   m_ObjectHideFlags: 0
