@@ -4,35 +4,55 @@ using UnityEngine;
 
 public class PlayerWeapons : MonoBehaviour
 {
+    [Header("Kills")]
     [SerializeField] private int killCount = 0;
+    [SerializeField] private int killsToChangeWeapon = 5;
+
+    [Header("Weapons")]
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private List<GameObject> weapons = new List<GameObject>();
-    private int killsToSpawn = 5;
-    private int currentWeaponIndex = 0;
 
-    public void UpdateKillCount()
+    private GameObject currentWeapon;
+    private int lastWeaponIndex = -1;
+    public void RegisterKill()
     {
         killCount++;
 
-        if (killCount % killsToSpawn == 0)
+        if (killCount % killsToChangeWeapon == 0)
         {
-            SpawnWeapon();
+            ChangeWeapon();
         }
     }
-    private void SpawnWeapon()
+    public void ResetKillsAndChangeWeapon()
+    {
+        killCount = 0;
+
+        ChangeWeapon();
+    }
+
+    public void ChangeWeapon()
     {
         if (weapons.Count == 0) return;
 
-        if (currentWeaponIndex >= weapons.Count)
+        int newIndex;
+
+        do
         {
-            Debug.Log("No quedan más armas en la lista");
-            return;
+            newIndex = Random.Range(0, weapons.Count);
+        }
+        while (weapons.Count > 1 && newIndex == lastWeaponIndex);
+
+        lastWeaponIndex = newIndex;
+
+        if (currentWeapon != null)
+        {
+            Destroy(currentWeapon);
         }
 
-        Instantiate(weapons[currentWeaponIndex],
-                    spawnPoint.position,
-                    spawnPoint.rotation);
-
-        currentWeaponIndex++;
+        currentWeapon = Instantiate(
+            weapons[newIndex],
+            spawnPoint.position,
+            spawnPoint.rotation
+        );
     }
 }

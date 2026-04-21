@@ -16,7 +16,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
         {
             GameController.Instance.EnemyEliminated();
             gameObject.SetActive(false);
-            w.UpdateKillCount();
+            w.RegisterKill();
         }
 
     }

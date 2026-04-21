@@ -38,7 +38,6 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
             col = GetComponent<Collider>();
         }
 
-        // Update is called once per frame
         void Update()
         {
             if (cooldown_finish && current_enemies <= max_enemies)
