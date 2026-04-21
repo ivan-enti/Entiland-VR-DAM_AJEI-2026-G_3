@@ -2856,6 +2856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   t_player: {fileID: 1725796535}
   spawner: {fileID: 1064451650}
+  weapons: {fileID: 1725796537}
 --- !u!1001 &589295000
 PrefabInstance:
   m_ObjectHideFlags: 0

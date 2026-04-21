@@ -7,6 +7,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
         public static GameController Instance { get; private set; }
         public Transform t_player;
         public EnemySpawner spawner;
+        public PlayerWeapons weapons;
         void Awake()
         {
             if (Instance != null && Instance != this)
