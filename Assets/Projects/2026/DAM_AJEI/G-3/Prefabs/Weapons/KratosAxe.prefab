@@ -2090,7 +2090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy_tag: Enemy
-  damage: 4
+  damage: 2
   attack_rate: 2
   rb: {fileID: 1141116996023051744}
   min_velocity: 1
