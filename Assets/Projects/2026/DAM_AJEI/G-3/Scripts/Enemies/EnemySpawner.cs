@@ -74,7 +74,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
             foreach (Target_Pool_Type pool_type in pool_list)
             {
                 temp += pool_type.probability;
-                if(random_percent <= temp)
+                if(random_percent <= temp && pool_to_use == null)
                 {
                     pool_to_use = pool_type.pool;
                 }

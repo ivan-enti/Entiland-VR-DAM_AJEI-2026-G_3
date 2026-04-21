@@ -179,7 +179,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11338888}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -655,7 +655,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99194128}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 9.599998}
+  m_LocalPosition: {x: 0, y: 0, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -664,8 +664,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1, y: 24.6}
-  m_SizeDelta: {x: 122.5, y: 69}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &99194130
 MonoBehaviour:
@@ -20059,7 +20059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 15
-  spawn_cooldown: 20
+  spawn_cooldown: 2
   max_enemies: 5
   pool_list:
   - pool: {fileID: 615036574}
@@ -20727,7 +20727,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1001, y: 406}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1246785265
 MonoBehaviour:
@@ -20749,8 +20749,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 9e09818cb747c914293d288fb8f83ac0, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -21568,10 +21568,10 @@ MonoBehaviour:
   killsToChangeWeapon: 5
   spawnPoint: {fileID: 1206355860}
   weapons:
-  - {fileID: 147753775}
-  - {fileID: 84288828}
-  - {fileID: 422320662}
-  - {fileID: 54356551}
+  - {fileID: 6309472011442293223, guid: 77f8a21e99ad125429b52ccafcb60641, type: 3}
+  - {fileID: 5974156276185869031, guid: 84ec61719be03224faa4f9d9a7df3aba, type: 3}
+  - {fileID: 4900450726843061442, guid: 886704e6f207e0540af3f456930d5471, type: 3}
+  - {fileID: 5250127600092056676, guid: 10f21822e3fd05543bb447c5b8ec016c, type: 3}
 --- !u!1 &1756940120
 GameObject:
   m_ObjectHideFlags: 0
