@@ -8,6 +8,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
         public Transform t_player;
         public EnemySpawner spawner;
         public PlayerWeapons weapons;
+        public GameObject GameOverUI;
         void Awake()
         {
             if (Instance != null && Instance != this)
@@ -25,7 +26,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
         }
         public void Die()
         {
-
+            GameOverUI.SetActive(true);
         }
     }
 }

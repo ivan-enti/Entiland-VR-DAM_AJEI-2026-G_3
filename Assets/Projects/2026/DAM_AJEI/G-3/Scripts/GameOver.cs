@@ -1,15 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOver : MonoBehaviour
+namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
 {
-    public void RetryGame()
+    public class GameOver : MonoBehaviour
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+        public void RetryGame()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
 
-    public void ExitGame()
-    {
-        Application.Quit();
+        public void ExitGame()
+        {
+            Application.Quit();
+        }
     }
 }
