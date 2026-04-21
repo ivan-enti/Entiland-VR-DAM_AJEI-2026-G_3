@@ -20176,16 +20176,28 @@ PrefabInstance:
       value: hacha maul (5)
       objectReference: {fileID: 0}
     - target: {fileID: 4576752333501849492, guid: 14242afb884e7b64aae6278f39f8a5a2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576752333501849492, guid: 14242afb884e7b64aae6278f39f8a5a2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576752333501849492, guid: 14242afb884e7b64aae6278f39f8a5a2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576752333501849492, guid: 14242afb884e7b64aae6278f39f8a5a2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.0875845
+      value: 4.15
       objectReference: {fileID: 0}
     - target: {fileID: 4576752333501849492, guid: 14242afb884e7b64aae6278f39f8a5a2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8343754
+      value: -0.77
       objectReference: {fileID: 0}
     - target: {fileID: 4576752333501849492, guid: 14242afb884e7b64aae6278f39f8a5a2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 95.86149
+      value: -7.245
       objectReference: {fileID: 0}
     - target: {fileID: 4576752333501849492, guid: 14242afb884e7b64aae6278f39f8a5a2, type: 3}
       propertyPath: m_LocalRotation.w
