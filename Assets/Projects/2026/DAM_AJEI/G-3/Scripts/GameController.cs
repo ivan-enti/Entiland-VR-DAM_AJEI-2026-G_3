@@ -23,5 +23,9 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
         {
             spawner.EnemyEliminated();
         }
+        public void Die()
+        {
+
+        }
     }
 }

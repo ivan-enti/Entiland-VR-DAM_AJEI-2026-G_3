@@ -47,7 +47,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Tres
 
         private void Die()
         {
-            Debug.Log("Player died");
+            GameController.Instance.Die();
         }
     }
 }
